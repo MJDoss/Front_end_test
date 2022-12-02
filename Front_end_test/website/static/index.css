@@ -79,6 +79,19 @@ button:hover{
 }
 
 select {
-    display: none;
+	width: 90%;
+	display: block;
+    min-padding: 2em;
+	min-height: 3em;
+    outline-radius: 25px;
+	margin: 20px;
+    border: 2px solid #fff;
+    border-radius: 2em;
+    background: #302c33;;
+    color: #fff;
+    font-family: monospace, serif;
+    letter-spacing: 0.05em;
+    font-size: 18px;
+	text-align: center;
 }
 

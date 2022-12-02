@@ -6,7 +6,7 @@
     <div>
         <div>
             <form action="" id="userData" onsubmit="return checkForm(this)">
-                <h3> Front end test </h3>
+                <h3> Front end test</h3>
                 <div>
                     <input type="text" id="name" name="name" placeholder="Name" required>
                 </div>
@@ -81,12 +81,17 @@
             function(error) {addOptions(error);}
         );
 
-        async function postData(data = {}){
-            let url = 'https://frontend-take-home.fetchrewards.com/form';
-            const response = await fetch(url, {
-                method : 'POST'
-            });
-        }
+        const form = document.getElementById('userData');
+        form.addEventListener('submit', callbackFunction);
+
+        function callbackFunction(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+
+            const formDataObj = {};
+            formData.forEach((value, key) => (formDataObj[key] = value));
+            console.log(formDataObj);
+        };
 
 
     </script>
