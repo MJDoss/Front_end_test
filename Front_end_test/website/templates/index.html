@@ -84,13 +84,26 @@
         const form = document.getElementById('userData');
         form.addEventListener('submit', callbackFunction);
 
-        function callbackFunction(event) {
+        function callbackFunction(event) { // Sends the data from the form back.
+            let url = 'https://frontend-take-home.fetchrewards.com/form';
             event.preventDefault();
             const formData = new FormData(event.target);
 
-            const formDataObj = {};
-            formData.forEach((value, key) => (formDataObj[key] = value));
-            console.log(formDataObj);
+            const formDataObj = Object.fromEntries(formData.entries());
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formDataObj),
+                })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log('Success:', data);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
         };
 
 
