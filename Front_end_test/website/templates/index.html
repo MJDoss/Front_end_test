@@ -97,7 +97,10 @@
                 },
                 body: JSON.stringify(formDataObj),
                 })
-                .then((response) => response.json())
+                .then((response) => {
+                    console.log('Code: ', response.status);
+                    return response.json();
+                })
                 .then((data) => {
                     console.log('Success:', data);
                 })

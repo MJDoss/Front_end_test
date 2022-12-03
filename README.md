@@ -2,7 +2,7 @@
  Author : Matthew Doss
 
  Languages : Python, Javascript
- 
+
  Tools used : Flask, JSON
 
 Notes :
@@ -19,7 +19,7 @@ Notes :
 Instructions :
 
     Step 0 : Installations
-        To run this app you will need to have the following projects installed : 
+        To run this app you will need to have the following projects installed :
         Flask
 
         For Flask you will need to install it. To do so go into the terminal and run the command:
@@ -50,3 +50,5 @@ Instructions :
 
     Step 3 : Go into your browser and go to the address of http://127.0.0.1:5000/
         The nav bar will link you to all the tools you will need for testing.
+
+    Step 4 : After filling out the form you should see in Console log a 201 status. 
