@@ -46,16 +46,6 @@
             return true;
         }
 
-        function buildUserJsonData(form) {
-            if(checkForm(form)) {
-                const JsonUserData = {  };
-                for(const pair of new FormData(form)){
-                    JsonUserData[pair[0]] = pair[1];
-                }
-                return JsonUserData;
-            }
-        }
-
         function addOptions(obj) { // Build the dropdown menus for Occupation and State.
             let occupations_options = '<option value="">Please select an Occupation</option>';
             for (let i in obj.occupations) {
